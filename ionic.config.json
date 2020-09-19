@@ -1,0 +1,7 @@
+{
+  "name": "easyGoldLoan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
