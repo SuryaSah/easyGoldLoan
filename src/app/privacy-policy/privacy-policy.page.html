@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>privacy-policy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-accordion
+     *ngFor="let technology of technologies"
+     name="{{ technology.name }}"
+     description="{{ technology.description }}"
+     image="{{ technology.image }}"
+     (change)="captureName($event)">
+  </app-accordion>
+</ion-content>

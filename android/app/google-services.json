@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "922445648695",
+    "firebase_url": "https://easygoldloan.firebaseio.com",
+    "project_id": "easygoldloan",
+    "storage_bucket": "easygoldloan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922445648695:android:5e12ea3d7e70bcf5a8c0b2",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922445648695-5hp83304uim5anfa87v7ufkvafbmouqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCy74NUSe0QeaEksYH8cbcoeOIEUUOtaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922445648695-5hp83304uim5anfa87v7ufkvafbmouqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

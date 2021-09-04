@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Loan Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label>Account Number</ion-label>
+      <ion-note slot="end">{{loanInfo._id}}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Laon Amount</ion-label>
+      <ion-note slot="end">{{loanInfo.amount}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Credit date</ion-label>
+      <ion-note slot="end">{{loanInfo.loanReqDate}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Interest rate</ion-label>
+      <ion-note slot="end">{{loanInfo.interestRate}}%</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Product Type</ion-label>
+      <ion-note slot="end">{{loanInfo.productType}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Total items</ion-label>
+      <ion-note slot="end">{{loanInfo.totalItems}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" shape="round" fill="outline" (click)="accountStatement(loanInfo._id)">Statements</ion-button>
+</ion-content>

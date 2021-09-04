@@ -1,0 +1,28 @@
+h5 {
+    cursor: pointer;
+    position: relative;
+    padding: 1em 0.35em;
+    border-bottom: 1px solid rgba(210,210,210,1);
+    margin: 0;
+    /* Define the style rules for the 'arrow icons' */
+    span {
+       position: absolute;
+       right: 1em;
+       top: 1.2em;
+    }
+}
+
+div {
+    position: relative;
+    padding: 10px;
+    background: rgba(230, 230, 230, 1);
+    border-bottom: 1px solid rgba(210, 210, 210, 1);
+}
+
+.active {
+    display: block
+}
+
+.inactive {
+    display: none;
+}

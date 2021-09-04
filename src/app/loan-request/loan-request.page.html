@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>loan-request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Amount Reuirement</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Product Type</ion-label>
+    <ion-select value="california" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="gold">Gold</ion-select-option>
+      <ion-select-option value="silver">Silver</ion-select-option>
+      <ion-select-option value="others">Others material</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- <ion-button (click)="SubmitRequest()">Submit Request</ion-button> -->
+  <ion-grid>
+    <ion-row class="ion-align-items-center">\
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="SubmitRequest()">Submit Request</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

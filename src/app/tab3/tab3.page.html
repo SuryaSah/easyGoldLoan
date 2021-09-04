@@ -1,17 +1,163 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon name="heart"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+
+      <ion-title>Profile</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <!-- <ion-button (click)="openeditprofile()">
+        Click Picture
+     </ion-button>
+     
+     <img [src]="clickedImage" /> -->
+  <ion-card class="profile">
+    <ion-img src="../../assets/images/Profile.jpg"></ion-img>
+    <!-- <div class="profile-img ion-text-center">
+      <ion-img src="../../assets/images/Profile.jpg"></ion-img>
+    </div> -->
+  </ion-card>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        Orders
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="orders()"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Help Center
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="helpCenter()"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Refer & Earn
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="referEarn()"></ion-icon>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label position="fixed">Name</ion-label>
+      <ion-input value="Shri Ganesh Kumar Prasad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Mobile Number</ion-label>
+      <ion-input value="9535676228"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Email Id</ion-label>
+      <ion-input value="ganesh@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="ion-text-wrap">Parmanent Address</ion-label>
+      <ion-input value="#10,Ganesh niwas, 1st floor,Kadirabad, Darbanhga"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed"class="ion-text-wrap">Current Address</ion-label>
+      <ion-input value="#10,Ganesh niwas, 1st floor,Kadirabad, Darbanhga"></ion-input>
+    </ion-item> -->
+  </ion-list>
+  <ion-list lines="full">
+      <ion-item>
+        <ion-label position="floating">Choose City</ion-label>
+        <ion-select value="california" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="california">California</ion-select-option>
+          <ion-select-option value="illinois">Illinois</ion-select-option>
+          <ion-select-option value="texas">Texas</ion-select-option>
+          <ion-select-option value="pennsylvania">Pennsylvania</ion-select-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+      <ion-label>
+        EGL Credit
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="eglCredit()"></ion-icon>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>
+        EGL Cash
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Saved Cards
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Address
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>
+        Coupons
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="coupons()"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        Profile Details
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="profileDetails()"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Settings
+      </ion-label>
+      <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+      <ion-icon name="chevron-forward-outline" slot="end" (click)="settings()"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="none">
+      <ion-item>
+        <ion-label>
+          FAQs
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          ABOUT US
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label (click)="termsOfUse()">
+          TERMS OF USE
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label (click)="privacyPolicy()">
+          PRIVACY POLICY
+        </ion-label>
+      </ion-item>
+      <ion-button expand="block" (click)="logout()">LOGOUT</ion-button>
+  </ion-list>
+  <p class="ion-text-center">App Version 1.0.0</p>
+  <!-- fab placed to the top end -->
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

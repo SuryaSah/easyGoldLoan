@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Easy Gold Loan
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- List of Text Items -->
+  <ion-list *ngFor="let loan of customerInfo.customerLoanInfo">
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Loan Amount {{loan.amount}}</h2>
+        <p>Loan Number {{loan._id}}</p>
+        <h3>Days Left <ion-text color="danger">10 days</ion-text></h3>
+      </ion-label>
+      <ion-button fill="outline" slot="end" (click)="loanDetails(loan._id)">View</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">\
+      <ion-col size="12" class="ion-text-center">
+        <ion-button class="ion-align-self-center" (click)="loanRequest(customerInfo._id)">New loan request</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

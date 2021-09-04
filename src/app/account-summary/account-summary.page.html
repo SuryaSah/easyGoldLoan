@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Account Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let account of acHistory">
+    <ion-item lines="none">
+      <ion-label>{{account.paymentDate ? account.paymentDate : account.paymentReqDate}}</ion-label>
+      <ion-note slot="end">{{ account.capitalPaid ? (account.interestPaid + account.capitalPaid)+'(Dr)' : account.interestCredit+'(Cr)'}}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label class="ion-text-wrap">{{account.description}}</ion-label>
+      <ion-note slot="end">Balance: {{account.totalBalance}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

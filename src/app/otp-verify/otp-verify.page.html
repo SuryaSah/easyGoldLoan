@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Otp Verify</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="medium" class="ion-text-center">
+    <p>Enter the code that was sent to</p>
+  </ion-text>
+  <ion-text color="danger" class="ion-text-center">
+    <p>+91 1234567890</p>
+  </ion-text>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-item class="ion-text-center">
+            <ion-input type="tel" value="" maxlength=1 minlength=1 lines="full" #a (keyup)="moveToNext(b)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="ion-text-center">
+            <ion-input type="tel" value="" maxlength=1 lines="full" #b (keyup)="moveToNext(c)" ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="ion-text-center">
+            <ion-input type="tel" value="" maxlength=1 lines="full" #c (keyup)="moveToNext(d)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="ion-text-center">
+            <ion-input type="tel" value="" maxlength=1 lines="full" #d></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <ion-button expand="block" color="danger" class="ion-margin-top" (click)="home()">Continue</ion-button>
+  <ion-text color="medium" class="ion-text-center">
+    <p>Didn't receive the code?</p>
+    <p>Send code again</p>
+    <p>Change phone number</p>
+  </ion-text>
+</ion-content>
